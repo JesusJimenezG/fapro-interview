@@ -2,9 +2,13 @@ from typing import Union
 
 from fastapi import FastAPI
 
+from uf.router import router
+
 app = FastAPI()
 
+app.include_router(router, prefix="/api")
 
-@app.get("/")
-def index():
-    return {"Hello": "World"}
+
+@app.get("/health-check")
+def health_check():
+    return {"status": "ok"}
