@@ -3,7 +3,7 @@ from fastapi import HTTPException
 from http import HTTPStatus
 from datetime import datetime
 from bs4 import BeautifulSoup
-from uf.services.services import get_uf_from_html
+from app.uf.services.services import get_uf_from_html
 
 
 def get_uf(date: str):

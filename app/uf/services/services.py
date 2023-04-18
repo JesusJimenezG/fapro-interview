@@ -1,6 +1,6 @@
 from datetime import datetime
 from bs4 import BeautifulSoup
-from uf.models.models import UFModel
+from app.uf.models.models import UFModel
 
 
 def get_uf_from_html(html: str, date: datetime):
